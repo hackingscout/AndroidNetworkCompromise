@@ -1,7 +1,7 @@
 AndroidNetworkCompromise
 ========================
 
-Android Network Discovery app with implemented thc-vp6 hack tool
+Android Network Discovery app with implemented thc-vp6 hack tool. An experiment to check security of Android systems.
 
 1. Intro
 2. Description
@@ -9,31 +9,36 @@ Android Network Discovery app with implemented thc-vp6 hack tool
 3. License
 4. GNU license attachment
 
-1. ----------------------------- Intro ---------------------------------------
+1. -----------------------------============ Intro ============---------------------------------------
 
 THC IPv6 is an attack toolkit which shows vulnerabilities of IPv6 protocol.
 Especially infamous Flood_router26 attack, which blocks/hangs/bsods Windows systems, Unixes and other OS'.
 Goal of this project is to prove possiblity (or otherwise) of crashing/haning Android telephones 
 and other operating systems (also PCs!) from the position of an Android device connected to the same WLan.
+
 Polish article as an reference:
+
 http://niebezpiecznik.pl/post/atak-ipv6-ra-odcina-mac-os-x-od-sieci-i-restratuje-windowsa/
 
-2. ----------------------------- Description ---------------------------------
+2. -----------------------------============ Description ============---------------------------------
 
 Please help to implement this tool. It is based on application "Android Network Discovery"
+
 https://github.com/rorist/android-network-discovery
+
 And thc tools are located here:
+
 www.thc.org/thc-ipv6/
 
-2a. ----------------------------- TO DO list ---------------------------------
+2a. -----------------------------============ TO DO list ============---------------------------------
 
 a) porting THC ipv6 from linux C program to an Android NDK module
 b) if ipv6 available on the phone - lunching flood_router26 attack against other machines in the wlan network
 
-3. ----------------------------- License -------------------------------------
+3. -----------------------------============ License ============-------------------------------------
 
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
+    Android Network Compromise - security audit program
+    Copyright (C) 2012  Multiple authors
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -49,7 +54,7 @@ b) if ipv6 available on the phone - lunching flood_router26 attack against other
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 
-4. ----------------------------- GNU License ---------------------------------
+4. -----------------------------============ GNU License ============---------------------------------
 
   	    GNU GENERAL PUBLIC LICENSE
 		       Version 2, June 1991

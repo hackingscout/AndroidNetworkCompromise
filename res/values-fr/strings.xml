@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2009-2010 Aubort Jean-Baptiste (Rorist)
+ Licensed under GNU's GPL 2, see README
+-->
+<resources>
+    <string name="app_name">Network Discovery</string>
+    <string name="app_loading">Chargement</string>
+    <string name="btn_yes">Oui</string>
+    <string name="btn_no">Non</string>
+    <string name="btn_discover">Rechercher</string>
+    <string name="btn_discover_cancel">Annuler</string>
+    <string name="btn_export">Exporter</string>
+    <string name="btn_close">Fermer</string>
+    <string name="btn_scan">Scanner</string>
+    <string name="btn_options">Options</string>
+    <string name="btn_back">Retour</string>
+    <string name="btn_info">Info</string>
+    <string name="btn_ports">Ports</string>
+    
+    <string name="task_db">Téléchargement de la base %s ...</string>
+    <string name="task_services">Création de la base de données des Services ... Veuillez patienter ...</string>
+    
+    <string name="package_missing">%s doit être installée depuis le Market !</string>
+    
+    <string name="wifi_enabled">Wifi activé</string>
+    <string name="wifi_enabling">Wifi en cours d\'activation </string>
+    <string name="wifi_disabling">Wifi en cours de desactivation</string>
+    <string name="wifi_disabled">Wifi desactivé</string>
+    <string name="wifi_scanning">Recherche des réseaux wifi</string>
+    <string name="wifi_associating">Association en cours avec %s</string>
+    <string name="wifi_dhcp">Demande d\'adresse IP à %s</string>
+    <string name="wifi_unknown">Etat du Wifi inconnu</string>
+    
+    <string name="discover_start">Recherche démarrée ...</string>
+    <string name="discover_finished">Recherche terminée !</string>
+    <string name="discover_canceled">Recherche annulée !</string>
+    <string name="discover_proxy_title">Erreur proxy</string>
+    <string name="discover_proxy_msg">La recherche est annulée car une adresse mac est apparue plusieurs fois, vous êtes probablement derrière un proxy.\n\nAccédez à la passerelle depuis votre navigateur: http://%s</string>
+    <string name="discover_root_title">Installation: Root</string>
+    <string name="discover_root_install">Voulez-vous installer le service de scan en root ?</string>
+    <string name="discover_root_restart">Redémarrage de l\'application ...</string>
+    <string name="discover_empty">Appuyez sur Rechercher pour démarrer</string>
+        
+    <string name="scan_single_title">Scanner une IP</string>
+    <string name="scan_single_summary">Entrez une adresse IP ou un nom d\'hôte sur lequel effectuer un scan de ports, p.ex. scanme.nmap.org</string>
+    <string name="scan_noport">Aucun port trouvé !</string>
+    <string name="scan_noaction">Aucune action associée !</string>
+    <string name="scan_connect">Ouvrir</string>
+    <string name="scan_start">Scan démarré ...</string>
+    <string name="scan_finished">Scan terminé !</string>
+    <string name="scan_canceled">Scan annulé !</string>
+    <string name="scan_open">Ouvert (%s)</string>
+    <string name="scan_closed">Fermé (%s)</string>
+    <string name="scan_host_unreachable">L\'hôte n\'est pas atteignable !</string>
+    
+    <string name="info_time">Temps de réponse:</string>
+    <string name="info_mac">Adresse MAC:</string>
+    <string name="info_nic">Vendeur NIC:</string>
+    <string name="info_ports_open">Ports ouverts:</string>
+    <string name="info_ports_closed">Ports fermés:</string>
+    <string name="info_unknown">Inconnu</string>
+    
+    <string name="export_finished">Fichier sauvegardé !</string>
+    <string name="export_choose">Choisir la destination</string>
+    <string name="export_save">Sauver</string>
+    <string name="export_exists_title">Le fichier existe déjà</string>
+    <string name="export_exists_msg">Voulez-vous l\'écraser ?</string>
+    
+    <string name="help_discovery_title">Découverte de machines</string>
+    <string name="help_discovery_content">La méthode utilisé, ne requiert pas les privilèges root. Dans les versions futures, des techniques plus avancées seront utilisée, une fois que l\'aspect non-root fonctionnera bien.\n\nVoici comment cela fonctionne:\n1. Calcule de la plage d\'IP du sous-réseau\n2. Iteration sur les adresses IP et lance une requête\n3. D\'abord cela execute la méthode InetAddress.isReachable(), qui lance un ping ICMP ou un Echo sur le port tcp/7\n4. Puis si cela n\'aboutit pas, on essaie de se connecter sur des ports connus (tcp connect()) tels que: 135, 139, 22, 111, 80\n5. Si aucune des méthodes n\'aboutit, la machine n\'est pas découverte</string>
+    <string name="help_portscan_title">Scan de ports</string>
+    <string name="help_portscan_content">Le scan de ports est orienté évènements, en utilisant les Selector et SocketChannel de Java.\nLe timeout est simulé en enregistrant le temps en ms lors de la création du socket et en vérifiant régulérement cette valeur.\n\nLa méthode de scan, tout comme pour la découverte de machine, utilise une connection tcp complète. (d\'autres méthodes de scan arriveront avec les fonctionnalités root)\nUn maximum de 127 sockets sont ouverts en même temps, la méthode n\'est donc pas toujours précise, mais relativement rapide.\nCela sera amélioré notement grâce à une future méthode de vérification de la congestion du réseau, se basant sur les temps de réponse des machines.\n\nUn port est consideré ouvert lorsque la connection tcp est complète, fermé lorsque la connection est établie mais qu\'aucun service n\'est actif sur le port et filtré après que le timeout soit écoulé.</string>
+    <string name="help_links_title">Liens</string>
+    <string name="help_links_content">- Méthodes de scan de ports de Nmap: http://nmap.org/man/fr/man-port-scanning-techniques.html\n\n- Découverte de machines dans nmap: http://nmap.org/man/fr/man-host-discovery.html</string>
+    
+    <string name="preferences_help">Aide</string>
+    <string name="preferences_export">Exporter</string>
+    <string name="preferences_credits">Credits</string>
+    <string name="preferences_discover">Découverte de Machines</string>
+    <string name="preferences_portscan">Scan de Ports</string>
+    <string name="preferences_advanced">Général</string>
+    
+    <string name="preferences_resolve_name_title">Résoudre les noms d\'hôtes</string>
+    <string name="preferences_resolve_name_summary">Utiliser la résolution DNS du système pour résoudre les IP</string>
+    <string name="preferences_vibrate_title">Vibration</string>
+    <string name="preferences_vibrate_summary">Vibre lorsque le Scan est terminé</string>
+    <string name="preferences_ratecontrol_enable_title">Contrôle fréquence de scan</string>
+    <string name="preferences_ratecontrol_enable_summary">Activer le contôle automatique de la vitesse de scan</string>
+    <string name="preferences_timeout_discover_title">Délai de connection</string>
+    <string name="preferences_timeout_discover_summary">Délai maximum d\'une connection à une machine, en millisecondes</string>
+    <string name="preferences_port_start_title">Premier port</string>
+    <string name="preferences_port_start_summary">Le premier port TCP à scanner. 1-65535</string>
+    <string name="preferences_port_end_title">Dernier port</string>
+    <string name="preferences_port_end_summary">Le dernier port TCP à scanner. 1-65535</string>
+    <string name="preferences_banner_title">Bannière de services</string>
+    <string name="preferences_banner_summary">Lit la banière pour un connection établie. (ex.: SSH-2.0-OpenSSH_5.1p1)</string>
+    <string name="preferences_timeout_force_title">Délai de connection personnalisé</string>
+    <string name="preferences_timeout_force_summary">Régler manuellement le délai de connection</string>
+    <string name="preferences_timeout_title">Délai de connection</string>
+    <string name="preferences_timeout_summary">Délai maximum d\'une connection à un port, en millisecondes</string>
+    <string name="preferences_allow_mobile_title">Scan par 3G</string>
+    <string name="preferences_allow_mobile_summary">Permet de scanner le réseau 3g/edge, résultats peuvent être inattendus</string>
+    <string name="preferences_ssh_user_title">Nom d\'utilisateur SSH</string>
+    <string name="preferences_ssh_user_summary">Utilisateur à utiliser pour se connecter en SSH</string>
+    <string name="preferences_threads_title">Threads</string>
+    <string name="preferences_threads_summary">Nombre maximum de threads à utiliser lors de la découverte de machines (1-256)</string>
+    <string name="preferences_resetdb_title">Mettre à jour la base des NIC</string>
+    <string name="preferences_resetdb_summary">Syncroniser la base des adresses MAC et des constructeurs de NIC</string>
+    <string name="preferences_resetdb_action">Voulez-vous télécharger la BDD ? (~%sk)</string>
+    <string name="preferences_resetdb_ok">Base de donnée mise à jour ! %S nouveaux éléments ...</string>
+    <string name="preferences_version_title">Version</string>
+    <string name="preferences_website_title">Site internet</string>
+    <string name="preferences_email_title">Contact</string>
+    <string name="preferences_intf_title">Interface réseau</string>
+    <string name="preferences_intf_summary">Choix de l\'interface à utiliser</string>
+    <string name="preferences_discover_method_title">Méthode de découverte</string>
+    <string name="preferences_discover_method_summary">Changer la méthode de découverte des machines</string>
+    <string name="preferences_discover_method_title_dialog">Choisissez une méthode</string>
+    <string name="preferences_ip_start_title">IP début</string>
+    <string name="preferences_ip_start_summary">Première adresse IP à scanner</string>
+    <string name="preferences_ip_end_title">IP fin</string>
+    <string name="preferences_ip_end_summary">Dernière adresse IP à scanner</string>
+    <string name="preferences_ip_custom_title">Plage d\'adresse IP personnalisée</string>
+    <string name="preferences_ip_custom_summary"></string>
+    
+    <string name="preferences_error1">Erreur: Le premier est plus grand que le dernier.</string>
+    <string name="preferences_error2">Erreur: Le nombre de Threads doit être entre 1 et 256 !</string>
+    <string name="preferences_error3">Erreur: Le téléchargement du fichier a été interrompu !</string>
+    <string name="preferences_error4">Erreur: La valeur n\'est pas une adresse IP valide !</string>
+       
+    <string-array name="method_discover_name">
+        <item>Ping/connect (défaut)</item>
+        <item>Requêtes DNS</item>
+    </string-array>
+    
+</resources>
